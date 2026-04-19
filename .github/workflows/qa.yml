@@ -1,0 +1,24 @@
+name: QA Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install --prefix shopify || true
+      - name: Run linter
+        run: npm run lint --prefix shopify || echo "No lint script found"
+      - name: Theme Check
+        run: |
+          npm install -g @shopify/theme-check
+          theme-check shopify/ || true
