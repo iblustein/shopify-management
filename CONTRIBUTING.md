@@ -1,29 +1,33 @@
 # Contributing to Shopify Management
 
-Thank you for contributing! Please follow these guidelines to keep the codebase clean and collaborative.
+Thank you for contributing to this project! Please follow the guidelines below to keep our codebase consistent and our workflow smooth.
 
 ---
 
 ## Branch Naming Conventions
 
-All branches should follow this pattern:
+All branches should follow this naming pattern:
 
 ```
-<type>/<task-id>-<short-description>
+<type>/<short-description>
 ```
 
-**Types:**
-- `feature/` — New features or enhancements
-- `fix/` — Bug fixes
-- `chore/` — Maintenance, refactoring, tooling
-- `hotfix/` — Urgent production fixes
+### Types
+| Type | Purpose |
+|------|---------|
+| `feature/` | New features or enhancements |
+| `fix/` | Bug fixes |
+| `task/` | Agent-assigned or operational tasks |
+| `chore/` | Maintenance, dependency updates, tooling |
+| `hotfix/` | Urgent production fixes |
 
-**Examples:**
-- `feature/dev-003-contributing-guide`
-- `fix/dev-012-cart-calculation-bug`
-- `hotfix/dev-020-checkout-crash`
+### Examples
+- `feature/add-product-sync`
+- `fix/order-webhook-handler`
+- `task/dev-003-contributing-md`
+- `hotfix/checkout-crash`
 
-> Never commit directly to `main`. Always work on a branch.
+> ⚠️ Never commit directly to `main`. All changes must go through a pull request.
 
 ---
 
