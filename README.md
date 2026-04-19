@@ -35,4 +35,5 @@ All commands are sent via WhatsApp to the CEO Agent.
 - **Code:** GitHub (this repo)
 - **CI/CD:** GitHub Actions
 - **Marketing:** Meta, Google Ads, TikTok, Instagram, Klaviyo
+
 Created by Zion @ 2026
