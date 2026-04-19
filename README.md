@@ -1,4 +1,5 @@
 # 🔥 Stoked — AI Orchestration System
+<!-- Maintained by the Stoked AI dev team -->
 
 An autonomous multi-agent system that manages, develops, markets, and supports the Stoked Shopify store.
 
