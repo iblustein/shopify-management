@@ -33,72 +33,55 @@ All branches should follow this naming pattern:
 
 ## Commit Message Format
 
-Follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
+Follow the [Conventional Commits](https://www.conventionalcommits.org/) standard:
 
 ```
-<type>(<scope>): <short description>
-
-[optional body]
-
-[optional footer]
+<type>(scope): <short description>
 ```
 
-### Types
-- `feat` – a new feature
-- `fix` – a bug fix
-- `docs` – documentation changes only
-- `chore` – maintenance tasks (no production code change)
-- `refactor` – code restructuring without feature changes
-- `test` – adding or updating tests
-- `ci` – CI/CD pipeline changes
+**Types:** `feat`, `fix`, `chore`, `docs`, `refactor`, `test`, `style`
 
-### Examples
+**Examples:**
 ```
-feat(products): add bulk sync from Shopify Admin API
-fix(webhooks): handle missing order ID in payload
+feat(cart): add discount code validation
+fix(checkout): resolve payment gateway timeout
 docs(readme): update setup instructions
-chore(deps): upgrade @shopify/api to v9
+chore(deps): bump shopify-api version to 7.1.0
 ```
 
 **Rules:**
-- Use imperative mood: "add feature" not "added feature"
+- Use the imperative mood ("add" not "added")
 - Keep the subject line under 72 characters
-- Reference task IDs in the footer when applicable: `Refs: dev-003`
+- Reference the task ID in the body when applicable: `Closes task dev-003`
 
 ---
 
 ## Pull Request Process
 
-1. **Branch from `main`** — always create your branch off the latest `main`.
-2. **Keep PRs focused** — one PR per feature, fix, or task. Avoid unrelated changes.
-3. **Write a clear PR title** — follow the same format as commit messages.
-4. **Fill out the PR description** with:
-   - What changed and why
-   - How to test it
-   - Any relevant screenshots or logs
-5. **Self-review your diff** before requesting a review.
-6. **Request at least one reviewer** before merging.
-7. **Squash and merge** is preferred to keep the history clean.
-8. **Delete the branch** after the PR is merged.
+1. **Create a branch** from `main` using the naming convention above.
+2. **Write your code** and commit with clear messages.
+3. **Open a PR** targeting `main` with:
+   - A clear title following the commit format
+   - A description of what was changed and why
+   - Reference to the task ID (e.g. `Task: dev-003`)
+4. **Request a review** — at least one approval is required before merging.
+5. **Do not merge your own PR** unless explicitly approved.
+6. **Delete the branch** after the PR is merged.
 
-### PR Title Examples
-- `feat(orders): add retry logic for failed webhooks`
-- `fix(auth): resolve token expiry on long sessions`
-- `task(dev-003): add CONTRIBUTING.md`
-
----
-
-## Agent-Assigned Tasks (A2A)
-
-When tasks are assigned via the A2A system:
-- Tasks land in `tasks/dev/<task-id>.md`
-- Create a branch named `task/<task-id>-<short-description>`
-- Write results to `tasks/results/<task-id>-result.md`
-- Update the task file Status from `pending` to `completed`
-- Never deploy — open a PR and notify the DevOps agent
+### PR Checklist
+- [ ] Branch is up to date with `main`
+- [ ] Code has been tested locally
+- [ ] No console logs or debug code left in
+- [ ] Relevant documentation updated if needed
 
 ---
 
-## Questions?
+## General Guidelines
 
-Open an issue or reach out to the team via the project's internal channels.
+- Keep PRs small and focused — one task per PR.
+- If you're unsure about an approach, open a draft PR and ask for feedback early.
+- Agent-generated code must be reviewed by a human before merging to `main`.
+
+---
+
+_Maintained by the Stoked Dev Team. Questions? Reach out to Neo (Main Agent)._
