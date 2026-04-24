@@ -1,27 +1,33 @@
 # Task Result: STOKED-003
 
-## Status: Completed
+**Status:** Completed ✅  
+**Date:** 2026-04-24  
+**Agent:** Dev
 
-## Task
-Create the Tops smart collection on Shopify for stoked.co.il.
+## Summary
 
-## What Was Done
-- Created Smart Collection via Shopify GraphQL API (collectionCreate mutation)
-- Title: Tops
-- Handle: tops
-- Description: Tees, tanks, hoodies and more — Stoked upper body essentials.
-- Collection ID: gid://shopify/Collection/358420185242
-- Rule: TAG EQUALS tops (appliedDisjunctively: false)
+Created and published the **Tops** collection on stoked-co.il Shopify store.
 
-## Verification
-- Collection confirmed live with handle: tops
-- Rule confirmed: TAG EQUALS tops
-- Description confirmed set correctly
-- Products: 0 currently (expected — auto-populates when products are tagged with tops)
-- Collection is published and visible
+## Actions Taken
 
-## Notes
-Collection will automatically include any product tagged with tops. No manual curation needed.
+1. **Attempted to create** collection via `collectionCreate` mutation — collection already existed with handle `tops` (previously created).
+2. **Updated description** to match spec exactly: *"Tees, hoodies, tanks and more — Stoked surf tops for every wave and every day."*
+3. **Published** the collection to Online Store (Publication ID: `gid://shopify/Publication/64144375962`) via `publishablePublish` mutation.
 
-## Date
-2026-04-24
+## Final State
+
+| Field        | Value |
+|--------------|-------|
+| ID           | `gid://shopify/Collection/358420185242` |
+| Title        | Tops |
+| Handle       | `tops` |
+| Type         | Smart / Automatic |
+| Rule         | TAG EQUALS `tops` |
+| Description  | Tees, hoodies, tanks and more — Stoked surf tops for every wave and every day. |
+| Published    | ✅ Yes (Online Store) |
+
+## Acceptance Criteria
+
+- [x] Collection exists with handle `tops`
+- [x] Automatic rules filtering by tag `tops`
+- [x] Published and visible on Online Store
